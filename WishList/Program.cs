@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Hosting;
 
 namespace WishList
 {
-    // ReSharper disable once ClassNeverInstantiated.Global
     public class Program
     {
         public static void Main(string[] args)
@@ -11,7 +10,7 @@ namespace WishList
             BuildWebHost(args).Run();
         }
 
-        private static IWebHost BuildWebHost(string[] args)
+        public static IWebHost BuildWebHost(string[] args)
         {
             return WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
